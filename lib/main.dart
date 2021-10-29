@@ -16,8 +16,10 @@ class _MyAppState extends State<MyApp> {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Material App Bar'),
+          title: const Text('Material App Bar'),
         ),
+
+        ///Este widget captura la accion del boton de atras para que cierre la ventana debe devolver true
         body: WillPopScope(
           onWillPop: () async {
             if (paginaActual == 0) {
